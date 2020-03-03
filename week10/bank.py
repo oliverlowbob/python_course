@@ -9,8 +9,9 @@ class Bank:
 
 
 class Account:
-    def __init__(self, accountNumber, name, balance):
-        self.accountNumber = accountNumber
+    accountnumber = 0
+    def __init__(self, accountNumber, name, balance=0):
+        self.accountNumber = accountNumber+1
         self.name = name
         self.balance = balance
         self.customers = {}
@@ -34,11 +35,11 @@ class DanskeBank:
 
 bank = Bank("Den Helt Dyre")
 customer1 = Customer("Dabmaster 5000", "1337-420-69")
-account1 = Account("1", customer1, 500)
+account1 = Account("1", customer1)
 bank.accounts[customer1] = account1
 
 customer2 = Customer("Freddy Licious", "12349-1241")
-account2 = Account("2", customer1, 500)
+account2 = Account("2", customer1)
 bank.accounts[customer2] = account2
 
 print(bank.accounts)

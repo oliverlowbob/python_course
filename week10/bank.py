@@ -3,12 +3,17 @@ class Bank:
         self.name = name
         self.accounts = {}
 
+    def __repr__(self):
+        return str(self.__dict__)
+
 class Account:
     def __init__(self, name, balance):
         self.name = name
         self.balance = balance
         self.customers = {}
 
+    def __repr__(self):
+        return str(self.__dict__)
 
 class Customer:
     def __inint__(self, *args):
@@ -17,6 +22,9 @@ class Customer:
         if len(args) == 2:
             self.name = args[0] 
             self.cpr = args[1]
-
+            
+    def __repr__(self):
+        return str(self.__dict__)
+        
 class DanskeBank:
     pass
